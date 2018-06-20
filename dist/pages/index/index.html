@@ -1,9 +1,47 @@
 <!doctype html>
 <html>
 <head>
-    <title>Token Generator</title>
+    <title>Access Token Generator</title>
 </head>
 <body>
+    <div id="app">
+        <h1>Access Token Generator</h1>
+        <label>
+            appID:
+            <input type="text" v-model="appID" size="32">
+        </label>
+        <p></p>
+        <label>
+            appCertificate:
+            <input type="text" v-model="appCertificate" size="32">
+        </label>
+        <p></p>
+        <label>
+            channelName:
+            <input type="text" v-model="channelName" size="32">
+        </label>
+        <p></p>
+        <label>
+            uid:
+            <input type="text" v-model="uid">
+        </label>
+        <p></p>
+        <label>
+            Expire Second from Now:
+            <input type="text" v-model="expireSecond">
+        </label>
+        <p></p>
+        <label  v-for="priviledgeId, priviledgeName in priviledges">
+            <input type="checkbox" :value="priviledgeId" v-model="priviledge">
+            {{priviledgeName}}
+            <br>
+        </label>
+        <input type="button" @click="generateToken" value="Generate">
+        <br/>
+        <input type="input" v-model="token" size="180">
+        <pre v-html="tokenInfo"></pre>
+    </div>
+    <script src="vue.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

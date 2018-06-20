@@ -1,0 +1,26 @@
+{
+  "name": "agoradynamickeyui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack-cli --mode=production",
+    "watch": "webpack-cli --mode=development -w",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scaret/AgoraDynamicKeyUI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scaret/AgoraDynamicKeyUI/issues"
+  },
+  "homepage": "https://github.com/scaret/AgoraDynamicKeyUI#readme",
+  "dependencies": {
+    "agoradynamickey": "git://git@github.com/scaret/AgoraDynamicKey",
+    "webpack": "^4.12.0",
+    "webpack-cli": "^3.0.8"
+  }
+}
